@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js" ></script>
+		<link href="css/theme/currentTheme/jquery-ui-1.10.4.custom.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="js/global.js"></script>
+		
+		<link href="css/theme/currentTheme/global.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="js/proposalMenu.js"></script>
+		<link href = "css/theme/currentTheme/proposalMenu.css" type = "text/css" rel="stylesheet" />
+		<link href = "css/theme/currentTheme/menu.css" type = "text/css" rel="stylesheet" />
+		<link href = "css/theme/currentTheme/Custom Design menu bar horizontal.css" type = "text/css" rel="stylesheet" />
+		
+		
+		<title>Miller Construction Site</title>
+		<meta charset="UTF-8">
+		
+		
+	</head>
+	
+	<body onLoad = "showDialog('dlgbox')">
+		
+		<div id="header">
+			<div id="backButton"><input type="button" value="Go Back" onclick="document.location.href='homepage.html'"></input></div>
+			<!--  <div id="notificationBox" onclick="document.location.href = 'triggers.html'"><div id="notificationBoxGreen"></div><div id="notificationBoxYellow"></div><div id="notificationBoxRed"></div></div>
+			--></div>
+			</br>
+			
+			
+			<!-- <img id="icon" src="https://lh3.googleusercontent.com/-lg4FCVMybqk/VcuDpQOPgdI/AAAAAAAAAh4/v5IhZMjtR58/w340-h279-no/millerLogo.jpg" alt="" height="170px">-->
+			
+			<div class = "HorizontalBar">
+				<div class="menu-wrap">
+					
+					<font id = title>
+						<nav class = "menu">
+							<ul class="clearfix">
+								<li>
+									<a href="#">Project<span class="arrow"></span></a>
+									
+									<ul class="sub-menu">
+										<li><a onClick="document.location.href='projectData.html'">Add Project</a></li>
+										<li><a onClick="document.location.href='editSelect.html'">Edit Project</a></li>
+									</ul>
+								</li>
+								
+								<li><a  onClick="document.location.href='query.html'">Reports</a></li>
+								
+								<li><a  onClick="document.location.href='triggers.html'">Trigger</a></li>
+								
+								<li><a onClick="document.location.href='defects.html'"> Equipment</a></li>
+								
+								<li><a onClick="document.location.href='propsalMenu.html'">CostSheet</a></li>
+								
+								<li><a onClick="document.location.href='logout.html'">Logout</a></li>
+								
+							</ul>
+						</nav>
+					</font>
+					
+				</div>
+			</div>
+			
+			<div id="white-background">
+			</div>
+			<div id="dlgbox">
+				<div id="dlg_header">Propsals</div>
+				<div id="dlg_body">Would you like to</div>
+				<div id="dlg_footer">
+					<button onclick="dlgBtn('add')">Add</button>
+					<button onclick="dlgBtn('edit')">Edit</button>	</br>
+					<button class="back" onclick="dlgBtn('back')">back</button>
+				</div>
+			
+					
+				
+			</div>
+			<div id="dlgbox_add">
+				<div id="dlg_header_add">Add Propsals</div>
+				<div id="dlg_body_add">Would you like to</div>
+				<div id="dlg_footer_add">
+					<button onclick="dlgBtn('normal')">Normal</button>
+					<button onclick="dlgBtn('excel')">Excel</button>
+					<button class="back" onclick="dlgBtn('back')">back</button>
+				</div>
+			</div>
+			<div id="dlgbox_edit">
+				<div id="dlg_header_edit">Edit Propsals</div>
+				<div id="dlg_body_edit">Search:</div>
+				<div id="dlg_footer_edit">
+					<label for="requiredDate">Date From:</label>
+					<input type="text" id="requiredDate" /></br>
+					
+					<label for="requiredDate">Date To:</label>
+					<input type="text" id="requiredDate" /></br>
+					
+					<label for="warehouse">Status:</label>
+					<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+					
+					<label for="warehouse">Scope:</label>
+					<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+					
+					<label for="warehouse">Region:</label>
+					<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+					<button class="back" onclick="dlgBtn('back_add')">back</button>
+				</div>
+			</div>
+			
+			<div id="dlgbox_excel">
+				<div id="dlg_header_excel">Import Excel</div>
+				<div id="dlg_footer_excel">
+					<label for="requiredDate">Excel Sheet Name:</label>
+					<input type="text" id="requiredDate" /> </br>
+					<br></br>
+					<button onclick="dlgBtn('normal')">Import</button>
+					<button onclick="dlgBtn('edit')">Select File</button>
+					<button class="back" onclick="dlgBtn('back_add')">back</button>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div id="footer"></div>
+	</body>
+</html>

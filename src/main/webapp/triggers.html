@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery.dropDownPlain.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/trigger.js"></script>
+	<link href="css/theme/currentTheme/global.css" type="text/css" rel="stylesheet" />
+	<link href="css/theme/currentTheme/triggers.css" type="text/css" rel="stylesheet" />
+	<link href="css/theme/currentTheme/jquery-ui-1.10.4.custom.css" type="text/css" rel="stylesheet" />
+	
+		<link href="css/theme/currentTheme/menu.css" type="text/css" rel="stylesheet" />
+	<link href="css/theme/currentTheme/globalMenu.css" type="text/css" rel="stylesheet" />
+	<title>Trigger Page</title>
+	<meta charset="UTF-8" />
+</head>
+	
+<body onload="getTriggers()">
+	<div id="header">
+	 <br />
+    <div id="backButton"><input type="button" value="Go Back" onclick="document.location.href='homepage.html'"></input></div>
+   
+	</div>
+	
+			<div class = "HorizontalBar">
+			<div class="menu-wrap">
+			
+			<font id = title>
+			<nav class = "menu">
+				<ul class="clearfix">
+					<li>
+						<a href="#">Project<span class="arrow"></span></a>
+						
+						  <ul class="sub-menu">
+							<li><a onClick="document.location.href='projectData.html'">Add Project</a></li>
+							<li><a onClick="document.location.href='editSelect.html'">Edit Project</a></li>
+						</ul>
+					</li>
+					
+					<li><a  onClick="document.location.href='query.html'">Reports</a></li>
+					
+					<li><a  onClick="document.location.href='triggers.html'">Trigger</a></li>
+					
+					<li><a id="ee"  onClick="document.location.href='defects.html'"> Equipment</a></li>
+					
+					<li><a onClick="document.location.href='proposalMenu.html'">CostSheet</a></li>
+					
+					<li><a onClick="document.location.href='logout.html'">Logout</a></li>
+			
+				</ul>
+				</nav>
+			</font>
+			
+			</div>
+		</div>
+	
+	
+	
+		<div class="dataDisplay" id="dataBox"></div>
+	    <div id="projectConfirmation" title="Confirm Project" style="display:hidden;"></div>
+	    <div class="contentHeader"><h2>Construction Project Notifications:</h2></div>
+
+	<table id="menuTable">
+		<tr id="menuTab">
+		<td id="infoSel" onclick="clickPane(this.id)">
+		<div class="category" id="info">
+			<h2 class="categoryContent" onclick="clickPane(this.id)">Info</h2>
+		</div>
+		</td>
+		</tr>
+		<tr id="menuTab">
+		<td id="warningSel" onclick="clickPane(this.id)">
+		<div class="category" id="warning">
+			<h2  class="categoryContent" >Warning</h2>
+		</div>
+		</td>
+		</tr>
+		<tr id="menuTab">
+		<td id="severeSel" onclick="clickPane(this.id)">
+		<div class="category" id="severe">
+			<h2 class="categoryContent">Severe</h2>
+		</div>
+		</td>
+		</tr>
+	</table>
+	
+
+
+
+</body>
+</html>

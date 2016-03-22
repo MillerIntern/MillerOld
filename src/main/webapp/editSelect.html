@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js" ></script>
+	<link href="css/theme/currentTheme/jquery-ui-1.10.4.custom.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="js/editSelect.js"></script>
+	<link href="css/theme/currentTheme/global.css" type="text/css" rel="stylesheet" />
+	<link href="css/theme/currentTheme/editSelect.css" type="text/css" rel="stylesheet" />
+	<link href = "css/theme/currentTheme/menu.css" type = "text/css" rel="stylesheet" />
+	<link href = "css/theme/currentTheme/globalMenu.css" type = "text/css" rel="stylesheet" />
+	
+	<title>Project Editor</title>
+	<meta charset="UTF-8">
+</head>
+<body onload="getProjectEnums()">
+    <div id="header">
+    <div id="backButton"><input type="button" value="Go Back" onclick="document.location.href='homepage.html'"></input></div>
+	<!--  <div id="notificationBox" onclick="document.location.href = 'triggers.html'"><div id="notificationBoxGreen"></div><div id="notificationBoxYellow"></div><div id="notificationBoxRed"></div></div>
+	--></div>
+	</br>
+	
+			<div class = "HorizontalBar">
+			<div class="menu-wrap">
+			
+			<font id = title>
+			<nav class = "menu">
+				<ul class="clearfix">
+					<li>
+						<a href="#">Project<span class="arrow"></span></a>
+						
+						  <ul class="sub-menu">
+							<li><a onClick="document.location.href='projectData.html'">Add Project</a></li>
+							<li><a onClick="document.location.href='editSelect.html'">Edit Project</a></li>
+						</ul>
+					</li>
+					
+					<li><a  onClick="document.location.href='query.html'">Reports</a></li>
+					
+					<li><a  onClick="document.location.href='triggers.html'">Trigger</a></li>
+					
+					<li><a onClick="document.location.href='defects.html'"> Equipment</a></li>
+					
+					<li><a onClick="document.location.href='proposalMenu.html'">CostSheet</a></li>
+					
+					<li><a onClick="document.location.href='logout.html'">Logout</a></li>
+			
+				</ul>
+				</nav>
+			</font>
+			
+			</div>
+		</div>
+	
+
+	<div id="content">	    
+	    <div id="projectPicker" title="Matching Projects" style="display:hidden;"></div>
+	    
+	    <div id="queryForm">
+	    	<fieldset id='required'>
+	    	<legend>Required:</legend>
+	    		<label for="warehouse">Warehouse:</label>
+	    		<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+	    		
+	    		<label for="stage">Project Stage:</label>
+	    		<select id="stage"><option value="default">--Please select an option--</option></select></br>	
+	    	 </fieldset>
+	    	 
+	    	<fieldset id='optional'>
+	    	<legend>Optional:</legend>
+	    	
+	    		<label for="class">Project Type:</label>
+	    		<select id="class"><option value="">--Please select an option--</option></select></br>
+	    		
+	    		<label for="item">Project Item:</label>
+	    		<select id="item"><option value="">--Please select an option--</option></select></br>
+	    		
+	    		<label for="id">Project ID#:</label>
+	    		<input id="id" type="text" /><br/>
+	    	 </fieldset>
+	    	 
+	    	 <button type="button" onclick="search()" >Search For Project</button>
+	   	</div>	    	
+	   	</div>    	 
+</body>
+</html>

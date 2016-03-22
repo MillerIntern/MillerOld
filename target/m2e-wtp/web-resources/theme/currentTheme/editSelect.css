@@ -1,0 +1,62 @@
+@CHARSET "ISO-8859-1";
+
+#queryForm fieldset
+{
+    /* To see the outline of the form */
+    padding: 1em;
+    border-radius: 1em;
+    background: white;
+	
+}
+#queryForm
+{
+	
+width:70%;
+margin-left:15%
+	
+	
+	
+}
+
+#queryForm fieldset select, input, textarea
+{
+	margin-top: 2px;
+}
+
+#queryForm fieldset textarea
+{
+	width: 250px;
+	bottom: -51px;
+	
+}
+
+.drop
+{
+	width: 250px;
+	
+}
+
+label
+{
+	display: inline-block;
+	width: 120px;
+	text-align: left;
+	
+}
+
+legend
+{
+	color: gray;
+	font-size: 20px;
+	font-style: italic;
+}
+
+#queryForm fieldset label, select, input
+{
+	vertical-align: middle;
+}
+
+.dateDrop
+{
+	width: 100px;
+}

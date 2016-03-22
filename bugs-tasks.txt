@@ -1,0 +1,20 @@
+ 
+ 
+ * Bugs to fix/things to do	
+	- Equipment(project)
+		+ Equipment needs to stop the saving of equipment that don't have the required fields filled(done)
+		+ When selecting equipment if you choose add when you already have something in the search bar(done)
+		+ when editing if you do not choose a selection it will crash. Which is fine but should not allow instead of crashing(done)
+		+ Should change equipment selection from search bar to on click
+	
+	-Equipment(list)
+		+ create equipment page which allows for the editing of any equipment and printing of a report
+	
+	-Inspections/permits
+		+ make sure all possible situations have been accounted for
+	
+	-database
+		- server side
+			+ need to add the additional tables for equipment, permit, inspections and edit close-out
+			+ make additions to the database and remove unnecessary tables
+		

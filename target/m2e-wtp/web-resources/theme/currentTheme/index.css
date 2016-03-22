@@ -1,0 +1,19 @@
+#login{
+	position: absolute;
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 10%;
+	width:30%;
+	padding: 5px;
+	border: 1px solid white;
+	background: black;
+	color: white;
+	font-family: arial;
+}
+
+input{
+	width: 80%;
+	background: white;
+	color: black;
+	font-weight: bold;
+}

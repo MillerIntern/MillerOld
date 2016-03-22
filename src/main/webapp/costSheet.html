@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js" ></script>
+		<link href="css/theme/currentTheme/jquery-ui-1.10.4.custom.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="js/global.js"></script>
+
+		<link href="css/theme/currentTheme/global.css" type="text/css" rel="stylesheet" />
+		<link href = "css/theme/currentTheme/tabContent.css" type = "text/css" rel="stylesheet" />
+		<script type="text/javascript" src="js/tab.js"></script>
+		<link href = "css/theme/currentTheme/costSheet.css" type = "text/css" rel="stylesheet" />
+
+		
+		<link href = "css/theme/currentTheme/menu.css" type = "text/css" rel="stylesheet" />
+
+		<link href = "css/theme/currentTheme/Custom Design menu bar horizontal.css" type = "text/css" rel="stylesheet" />
+
+		
+		<title>Miller Construction Site</title>
+		<meta charset="UTF-8">
+	</head>
+	
+<body>
+<div id="header">
+<div id="backButton"><input type="button" value="Go Back" onclick="document.location.href='homepage.html'"></input></div>
+<!--  <div id="notificationBox" onclick="document.location.href = 'triggers.html'"><div id="notificationBoxGreen"></div><div id="notificationBoxYellow"></div><div id="notificationBoxRed"></div></div>
+--></div>
+</br>
+
+		
+		<!-- <img id="icon" src="https://lh3.googleusercontent.com/-lg4FCVMybqk/VcuDpQOPgdI/AAAAAAAAAh4/v5IhZMjtR58/w340-h279-no/millerLogo.jpg" alt="" height="170px">-->
+		
+		<div class = "HorizontalBar">
+			<div class="menu-wrap">
+			
+			<font id = title>
+			<nav class = "menu">
+				<ul class="clearfix">
+					<li>
+						<a href="#">Project<span class="arrow"></span></a>
+						
+						  <ul class="sub-menu">
+							<li><a onClick="document.location.href='projectData.html'">Add Project</a></li>
+							<li><a onClick="document.location.href='editSelect.html'">Edit Project</a></li>
+						</ul>
+					</li>
+					
+					<li><a  onClick="document.location.href='query.html'">Reports</a></li>
+					
+					<li><a  onClick="document.location.href='triggers.html'">Trigger</a></li>
+					
+					<li><a onClick="document.location.href='defects.html'"> Equipment</a></li>
+					
+					<li><a onClick="document.location.href='proposalMenu.html'">CostSheet</a></li>
+					
+					<li><a onClick="document.location.href='logout.html'">Logout</a></li>
+			
+				</ul>
+				</nav>
+			</font>
+			
+			</div>
+		</div>
+
+
+  <div id =  "searchBar">
+  <h1> Search Bar </h1>
+  <div class = "textArea">
+ 
+		
+		<label for="requiredDate">Date From:</label>
+		<input type="text" id="requiredDate" /></br>
+		
+		<label for="requiredDate">Date To:</label>
+		<input type="text" id="requiredDate" /></br>
+		
+		<label for="warehouse">Status:</label>
+		<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+		
+		<label for="warehouse">Scope:</label>
+		<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+		
+		<label for="warehouse">Region:</label>
+		<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+
+  </div>	
+  
+  
+  </div>
+  
+  <div id = "searchResults">
+  <h1	> Search Results </h1>
+  <div id="dialog-window"> <div id="scrollable-content">
+  
+  </div></div>
+  
+  
+  </div>
+  
+  
+  <div id = "midContent">
+  <div id="dialog-window">
+	<div id="scrollable-content">
+	<div id = tit>
+	<h1> MCS Estimate Sheet </h1>
+	<div class = "textArea">
+		<label for="Location">Location:</label>
+		<input type="text" id="location" /></br></br>
+		
+		<label for="scope">Scope:</label>
+		<input type="text" id="scope" /></br></br>
+	</div>
+	</div>
+	
+  <fieldset id = 'required'>
+	<legend> Required Proposal Information </legend>
+	<div class = "textArea">
+		<label for="warehouse">Warehouse:</label>
+		<select id="warehouse"><option value="default">--Please select an option--</option></select></br>
+	
+		<label for="requiredDate">Date:</label>
+		<input type="text" id="requiredDate" /></br>
+		
+		<label for="preparedBy">Prepared By:</label>
+		<select id="preparedBy"><option value="default">--Please select an option--</option></select></br>
+		
+		<label for="jobNum">Job#:</label>
+		<input type="text" id="jobNum" /></br>
+		
+		<label for="requiredDate">MCS Proposal/Change Order Price:</label>
+		<input type="text" id="requiredDate" /></br>
+		
+		<label for="description">Project Description:</label>
+		<textarea type="textarea" id="description" ></textarea></br>
+	</div>
+	</fieldset>
+	
+	
+	<fieldset id = 'estimates'>
+	<legend> Estimates </legend>
+	
+	<h2 id="contractorCosts"> Contractor Costs </h2>
+	<div id  = "contrac">
+	<div class = "textArea">
+	
+		<div class = "contraName">
+		<label id = "cName"> Contractor Name </label>
+		<label id = "unitCost"> #cost </label>
+		
+		</div>
+		
+		<label for="gC">General Contractor:</label>
+		<input type="text" id="jobNum" />
+		<input id = "gC" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		
+		<label for="electrical">Electrical:</label>
+		<input type="text" id="jobNum" />
+		
+		<input id = "electrical" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="mechanical">Mechanical:</label>
+		<input type="text" id="jobNum" />
+		<input id = "mechanical" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="pFloor">Polumer Floor:</label>
+		<input type="text" id="jobNum" />
+		<input id = "pFloor" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="fProtection">Fire Protection:</label>
+		<input type="text" id="jobNum" />
+		<input id = "fProtection" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="subcontTot">Subcontractor Subtotal:</label>
+		<input type="text" id="jobNum" />
+		<input id = "subcontTot" type="number" min="0.01" step="0.01" max="2500" disabled /></br>
+	</div>
+	</div>
+	
+	<h2 id=" travelLodging"> MCS Travel/Lodging Total </h2>
+	<div class = "textArea">
+		<div class = "units">
+		<label id = "unit"> #unit </label>
+		<label id = "unitCost"> #unitcost </label>
+		<label id = "costTot"> #costTotal </label><br>
+		</div>
+		
+		<label for="airfare">Airfare:</label>
+		<input id = "airfare" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "airfare" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "airfare" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="rentalCar">Rental Car:</label>
+		<input id = "rentalCar" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "rentalCar" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "rentalCar" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="mileage">Mileage:</label>
+		<input id = "mileage" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "mileage" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "mileage" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="lodging">Lodging:</label>
+		<input id = "lodging" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "lodging" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "lodging" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="food">Food:</label>
+		<input id = "food" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "food" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "food" type="number" min="0.01" step="0.01" max="2500"  /></br>
+	<br></br>
+		
+		<label for="tTot">Travel Total:</label>
+		<input id = "tTot" type="number" min="0.01" step="0.01" max="2500" disabled /></br>
+		
+		
+		<br></br>
+		<label for="mgr">MCS Project Mgr Labor:</label>
+		<input id = "mgr" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "mgr" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "mgr" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="bluePrints">MCS BluePrints:</label>
+		<input id = "bluePrints" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "bluePrints" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "bluePrints" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="freight">MCS Small Freight:</label>
+		<input id = "frieght" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "frieght" type="number" min="0.01" step="0.01" max="2500"  />
+		<input id = "frieght" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		<br></br>
+		<label for="mcsTot">MCS Total:</label>
+		<input id = "mcsTot" type="number" min="0.01" step="0.01" max="2500"  disabled /></br>
+	</div>	
+	<h2 id = "totals"> Totals </h2>
+	<div class = "totalsArea">
+	<div class = "textArea">
+		<label for="propSubtotal">Proposal Subtotal:</label>
+		<input id = "propSubtotal" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="pgo">Profit,G&A, O/H:</label>
+		<input id = "pgo" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="bid">Bid Subtotal:</label>
+		<input id = "bid" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="stateTax">State Sales Tax:</label>
+		<input id = "stateTax" type="number" min="0.01" step="0.01" max="2500"  /></br>
+		
+		<label for="grandTot">Grand Total:</label>
+		<input id = "grandTot" type="number" min="0.01" step="0.01" max="2500"  /></br>
+	</div>	
+	</div>
+	<h2 id = "Project Variables"> Project Variables </h2>
+		<div class = "textArea">
+		
+		<label for="profMargin">Profit Margin:</label>
+		<input id = "profMargin" type="number" min="0.01" step="0.01" max="2500" disabled /></br>
+		
+		<label for="equipMargin">Equipment Margin:</label>
+		<input id = "equipMargin" type="number" min="0.01" step="0.01" max="2500" disabled /></br>
+		
+		<label for="stateSalesTax">State Sales Tax:</label>
+		<input id = "stateSalesTax" type="number" min="0.01" step="0.01" max="2500" disabled /></br>
+		
+		<label for="mcsSupervision">MCS Supervision:</label>
+		<input id = "mcsSupervision" type="number" min="0.01" step="0.01" max="2500" disabled /></br>
+		</div>
+		
+		
+	
+	</div></div>
+	</fieldset>
+  
+  
+  
+  </div>
+  <br></br>
+  <input type="button" value="Click here to save the Project">		
+		
+		
+						
+						
+<div id="footer"></div>
+</body>
+</html>
+						
